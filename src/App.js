@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Card from 'react-bootstrap/Card';
+import ListItem from "./components/ListItem";
+import ListGroup from 'react-bootstrap/ListGroup';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Card style={{ width: '30rem', margin:"50px auto", padding:"1rem" }}>
+          <h2 className='h2 text-center border-bottom p-2'>Список дел</h2>
+          <ListGroup>
+            <ListItem task="Сходить магазин" isFinished={true} />
+            <ListItem task="Забрать ребенка" isFinished={false} />
+          </ListGroup>
+
+      </Card>
     </div>
   );
 }
 
 export default App;
+
+
+
+
